@@ -1,0 +1,59 @@
+@import "mixins";
+
+.purchase {
+  background: url(../img/bg.jpg) 0 0 repeat;
+
+  &__wrapper {
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    padding-bottom: 200px;
+    text-align: center;
+    @include wrapper;
+  }
+  &__text {
+    padding-top: 30px;
+    max-width: 812px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  p {
+    font-family: Tahoma;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  &__link {
+    color: #bd0f1f;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.button-purchase {
+  margin-left: 0;
+  width: 350px;
+  margin-top: 70px;
+  &:after {
+    width: 350px;
+  }
+}
+.pages-title {
+  padding-top: 90px;
+  padding-bottom: 45px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dedede;
+  text-align: left;
+
+  h2 {
+    font-family: 'museo_sans_cyrl700';
+    font-size: 26px;
+    line-height: 29px;
+    color: #000;
+    text-transform: uppercase;
+    margin-left: 100px;
+  }
+}

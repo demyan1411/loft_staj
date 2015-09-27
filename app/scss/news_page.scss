@@ -1,0 +1,91 @@
+@import "mixins";
+
+.news {
+  background: url(../img/bg.jpg) 0 0 repeat;
+
+  &__wrapper {
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    padding-bottom: 150px;
+    @include wrapper;
+  }
+  &-item {
+    width: 880px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: Tahoma;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    border-bottom: 1px solid #e1e1e1;
+
+    &__photo {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+    }
+    &__info {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 580px;
+    }
+    div {
+      color: #757575;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    &__link {
+      color: #bd0f1f;
+      font-size: 12px;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.numbers {
+  width: 880px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 50px;
+  font-family: 'museo_sans_cyrl500';
+  font-size: 18px;
+  line-height: 18px;
+  line-height: 27px;
+  color: #000;
+
+  @include cl;
+
+  &__list {
+    float: right;
+  }
+  &__item {
+    float: left;
+    width: 27px;
+    box-sizing: border-box;
+    text-decoration: underline;
+
+    &:hover, &--active {
+      color: #fff;
+      text-decoration: none;
+      background: #bd0f1f;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+}

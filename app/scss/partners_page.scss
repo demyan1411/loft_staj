@@ -1,0 +1,51 @@
+@import "mixins";
+
+.partners {
+  background: url(../img/bg.jpg) 0 0 repeat;
+
+  &__wrapper {
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 140px;
+
+    @include wrapper;
+  }
+  &__section {
+    text-align: center;
+  }
+  &__block {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 35px;
+    padding-bottom: 15px;
+  }
+  &__company {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 90px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__img-block {
+    height: 150px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    @include center;
+  }
+  &__img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__name {
+    max-width: 205px;
+    color: #747474;
+    font-family: Tahoma;
+    line-height: 24px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,47 @@
+@import "mixins";
+
+.leaders {
+  background: url(../img/bg.jpg) 0 0 repeat;
+
+  &__wrapper {
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    padding-bottom: 150px;
+    @include wrapper;
+  }
+}
+.person {
+  width: 780px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: Tahoma;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+
+  &__photo {
+    width: 204px;
+    height: 204px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 30px;
+    vertical-align: middle;
+  }
+  &__info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__place{
+    max-width: 290px;
+  }
+  &__mail {
+    color: #bd0f1f;
+    margin-top: 18px;
+    display: block;
+  }
+}

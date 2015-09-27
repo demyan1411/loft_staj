@@ -1,0 +1,74 @@
+@import "mixins";
+
+.rates {
+  position: relative;
+  background: url(../img/bg.jpg) 0 0 repeat;
+  border-bottom: 1px solid #e1e1e1;
+
+  &__wrapper {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 66px;
+    @include wrapper;
+  }
+  &-block {
+    display: inline-block;
+    vertical-align: top;
+    width: 231px;
+    height: 231px;
+    background-color: #bd0f1f;
+    font-family: 'museo_sans_cyrl700';
+    font-size: 17px;
+    line-height: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    // padding-top: 145px;
+    position: relative;
+
+    &1 {
+      background: #bd0f1f url(../img/rate1.png) center 55px no-repeat;
+    }
+    &2 {
+      background: #bd0f1f url(../img/rate2.png) center 55px no-repeat;
+    }
+    &3 {
+      background: #bd0f1f url(../img/rate3.png) center 55px no-repeat;
+    }
+
+    &--hover {
+      position: absolute;
+      width: 235px;
+      height: 235px;
+      z-index: 1;
+      border: 3px solid #d9d9d9;
+      margin-left: -5px;
+      margin-top: -5px;
+      box-shadow: inset 0 0 0px 2px #fff;
+      display: none;
+    }
+    &:hover &--hover {
+      display: block;
+    }
+
+    &--center {
+      margin: 0 135px;
+    }
+
+    &__link {
+      max-width: 190px;
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: underline;
+      position: relative;
+      z-index: 2;
+      margin-top: 145px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+app/bower
+app/php/phpmailer
+dist
+psd
+
+/vendor/

@@ -1,0 +1,36 @@
+section.sectionForm
+	.sectionForm__wrapper
+		form#form.form(action="php/mail.php")
+			h2.form__title Задать вопрос
+			label.form__label
+				span.form__desc Представьтесь, пожалуйста
+					span.form__desc-red *
+					|:
+				input(type="text", name="name", placeholder="Константин", data-validation="text").form__input
+			label.form__label
+				span.form__desc Ваш e-mail
+					span.form__desc-red *
+					|:
+				input(type="text", name="email", placeholder="ivanov@mail.ru", data-validation="mail").form__input
+
+			label.form__label
+				span.form__desc Ваш вопрос
+					span.form__desc-red *
+					|:
+				textarea(name="comment", placeholder="Комментарии", data-validation="text").form__textarea
+
+			.form__label
+				span.form__desc Введите текст с картинки
+					span.form__desc-red *
+					|:
+				.code
+					input(type="text").code__input
+					img(src="img/update.png", alt="update").code__update
+					.code__field
+						img(src="img/capcha.jpg", alt="capcha").code__capcha
+
+			.form__nec
+				span.form__desc-red *
+				| поля, обязательные для заполнения
+
+			button(type="submit").button Отправить

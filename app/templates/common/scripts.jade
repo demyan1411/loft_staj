@@ -1,0 +1,30 @@
+#preload.popup
+  .popup__overlay
+  img(src="img/bx_loader.gif", alt="preload").popup__preload
+#success.popup
+  .popup__overlay
+  .popup__content
+    .popup__content-inner Ваша заявка отправлена
+    a.popup__close &otimes;
+#error.popup
+  .popup__overlay
+  .popup__content
+    .popup__content-inner.popup__content-inner_error Ошибка
+    a.popup__close &otimes;
+
+// build:js js/vendor.min.js
+// bower:js
+script(src='bower/jquery/jquery.js')
+// endbower
+// endbuild
+script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")
+// build:js js/main.min.js
+script(src='js/modules.js')
+script(src='js/main.js')
+// endbuild
+
+// build:js js/iePlaceholder.min.js
+<!--[if lte IE 9]>
+script(src='js/iePlaceholder.js')
+<![endif]-->
+// endbuild

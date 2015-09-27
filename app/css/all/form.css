@@ -1,0 +1,247 @@
+.sectionForm {
+  border-bottom: 1px solid #e1e1e1;
+  background: url(../img/bg.jpg) 0 0 repeat; }
+
+.sectionForm__wrapper {
+  box-sizing: border-box;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background: #f7f8f8;
+  text-align: center;
+  padding-top: 48px;
+  max-width: 1100px;
+  min-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box; }
+
+.form {
+  padding: 10px;
+  padding-top: 0;
+  width: 585px;
+  box-sizing: border-box;
+  margin-bottom: 45px;
+  display: inline-block; }
+  .form__label {
+    display: block;
+    font-size: 0;
+    margin-bottom: 13px;
+    position: relative; }
+    .form__label:before, .form__label:after {
+      content: " ";
+      display: table; }
+    .form__label:after {
+      clear: both; }
+  .form__title {
+    font-family: 'museo_sans_cyrl700';
+    font-size: 26px;
+    line-height: 29px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 48px; }
+  .form__desc {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 17px;
+    position: absolute;
+    top: 8px;
+    right: 364px;
+    text-align: right; }
+    .form__desc-red {
+      color: #bd0f1f; }
+  .form__input, .form .placeholder, .form__textarea {
+    width: 344px;
+    font-size: 12px;
+    color: #000;
+    padding: 7px;
+    box-sizing: border-box;
+    border: 1px solid #bd0f1f;
+    background: #fff;
+    float: right;
+    height: 32px; }
+    .form__input::-webkit-input-placeholder, .form .placeholder::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+      color: #dae1eb; }
+    .form__input:-moz-placeholder, .form .placeholder:-moz-placeholder, .form__textarea:-moz-placeholder {
+      color: #dae1eb; }
+    .form__input::-moz-placeholder, .form .placeholder::-moz-placeholder, .form__textarea::-moz-placeholder {
+      color: #dae1eb; }
+    .form__input:-ms-input-placeholder, .form .placeholder:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+      color: #dae1eb; }
+  .form__select {
+    position: relative;
+    float: right;
+    font-size: 12px;
+    margin-left: 12px;
+    padding: 0;
+    width: 51px; }
+  .form__selectValue {
+    background: #fff;
+    padding: 3px;
+    padding-left: 4px;
+    box-sizing: border-box;
+    border: 1px solid #dae1eb;
+    position: relative;
+    color: #dae1eb; }
+    .form__selectValue_active {
+      color: #000; }
+    .form__selectValue:after {
+      content: '';
+      width: 26px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #00b9fe url(../img/down.png) center center no-repeat;
+      cursor: pointer; }
+  .form .placeholder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 6px 7px;
+    background: none; }
+  .form__textarea {
+    height: 124px;
+    resize: none;
+    display: block; }
+  .form__buttons:before, .form__buttons:after {
+    content: " ";
+    display: table; }
+  .form__buttons:after {
+    clear: both; }
+  .form__nec {
+    margin-left: 119px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #afafaf;
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 50px; }
+  .form__buttons {
+    text-align: center; }
+
+.scroller {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 210px;
+  display: none;
+  border: 1px solid #dae1eb;
+  border-top: none;
+  box-sizing: border-box; }
+  .scroller__contetnt {
+    position: absolute;
+    width: 100%;
+    height: 210px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    background: #fff;
+    overflow-y: scroll; }
+  .scroller__contetnt::-webkit-scrollbar {
+    width: 0; }
+  .scroller__option {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 3px;
+    padding-left: 6px; }
+    .scroller__option:hover {
+      background: #dae1eb;
+      cursor: pointer; }
+  .scroller__bar-wrapper {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    bottom: 5px;
+    right: 5px;
+    width: 8px;
+    border-radius: 5px;
+    background: #ddf;
+    background: rgba(0, 0, 255, 0.1);
+    background: transparent;
+    pointer-events: none; }
+  .scroller__bar {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    background: #00b9fe;
+    height: 80px !important;
+    opacity: .6;
+    pointer-events: auto; }
+    .scroller__bar2 {
+      height: 130px !important; }
+
+.code {
+  width: 350px;
+  box-sizing: border-box;
+  float: right;
+  text-align: right; }
+  .code__input, .code__field {
+    display: inline-block;
+    vertical-align: middle;
+    width: 140px;
+    border: 1px solid #bd0f1f;
+    background: #fff; }
+  .code__input {
+    height: 30px; }
+  .code__field {
+    height: 38px;
+    border: 1px solid #959595;
+    text-align: center; }
+    .code__field:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+  .code__capcha {
+    display: inline-block;
+    vertical-align: middle; }
+  .code__update {
+    width: 16px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 22px;
+    cursor: pointer; }
+
+.button {
+  background: #fff;
+  font-family: 'museo_sans_cyrl700';
+  font-size: 17px;
+  color: #bd0f1f;
+  text-transform: uppercase;
+  border: 3px solid #bd0f1f;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 42px;
+  transition: all linear 0.2s;
+  line-height: 50px;
+  width: 213px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1; }
+  .button:after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 213px;
+    bottom: -3px;
+    left: -3px;
+    background: #000;
+    opacity: 0;
+    transition: all linear 0.2s; }
+  .button:hover {
+    background: #bd0f1f;
+    color: #fff; }
+  .button:active:after {
+    opacity: 1; }
+  .button-up {
+    border: 3px solid #ccc;
+    color: #ccc; }
+    .button-up:after {
+      background: #716b6b; }
+    .button-up:hover {
+      background: #ccc;
+      color: #fff; }

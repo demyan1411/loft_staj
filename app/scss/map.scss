@@ -1,0 +1,112 @@
+@import "mixins";
+
+.map {
+  background: url(../img/bg.jpg) 0 0 repeat;
+  &__wrapper {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 45px;
+    @include wrapper;
+  }
+  &__title {
+    font-family: 'museo_sans_cyrl700';
+    font-size: 26px;
+    line-height: 29px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 73px;
+    margin-left: 68px;
+  }
+  &__icons {
+    display: inline-block;
+    margin-left: 58px;
+    margin-bottom: 40px;
+  }
+  &__icon {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 57px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 33px;
+      bottom: 0;
+      left: -27px;
+
+    }
+    &1:after {
+      background: url(../img/map1.png) 0 0 no-repeat;
+    }
+    &2:after {
+      background: url(../img/map2.png) 0 0 no-repeat;
+    }
+    &3:after {
+      background: url(../img/map3.png) 0 0 no-repeat;
+    }
+  }
+
+}
+#map {
+  width: 1036px;
+  height: 511px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.hint {
+  display: inline-block;
+  padding: 20px 13px 5px 13px;
+  position: relative;
+  top: -50px;
+  left: 20px;
+  width: 335px;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 2px solid #c52b39;
+  border-radius: 4px;
+  font-family: Arial;
+  box-sizing: border-box;
+  z-index: 3;
+
+  &:after {
+    content: '';
+    width: 24px;
+    height: 35px;
+    background: url(../img/triangle.png) 0 0 no-repeat;
+    position: absolute;
+    top: 40px;
+    left: -23px;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: #bd0f1f;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    max-width: 240px;
+    margin-bottom: 15px;
+  }
+  &__img {
+    display: block;
+  }
+}
+#map {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}

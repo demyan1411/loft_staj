@@ -1,0 +1,83 @@
+.footer {
+  margin-top: -595px;
+  height: 595px;
+  box-sizing: border-box; }
+  .footer__wrapper {
+    border-left: 1px solid #a70d1b;
+    border-right: 1px solid #a70d1b;
+    padding-top: 35px;
+    padding-bottom: 45px;
+    max-width: 1100px;
+    min-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box; }
+    .footer__wrapper-bottom {
+      max-width: 1100px;
+      min-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box; }
+  .footer__block-top {
+    background: #bd0f1f;
+    border-bottom: 1px solid #555; }
+  .footer__menu {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    box-sizing: border-box;
+    margin: 0 14px; }
+    .footer__menu--item {
+      height: 42px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ca3f4c;
+      font-family: Arial;
+      font-size: 13px;
+      line-height: 15px;
+      display: table;
+      color: #fff;
+      width: 100%; }
+      .footer__menu--item:first-child {
+        font-family: 'museo_sans_cyrl700';
+        text-transform: uppercase;
+        border-top: none;
+        padding-left: 6px; }
+    .footer__menu--link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle; }
+      .footer__menu--link:hover {
+        text-decoration: underline; }
+  .footer__block-bottom {
+    background: url(../img/footer_bg.jpg) 0 0 repeat;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center; }
+  .footer__bottom-title {
+    font-family: 'museo_sans_cyrl700';
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+  .footer__bottom-adress {
+    font-family: 'museo_sans_cyrl300';
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 370px;
+    display: inline-block;
+    line-height: 22px; }
+  .footer__bottom-mail {
+    text-decoration: underline; }
+    .footer__bottom-mail:hover {
+      text-decoration: none; }
+  .footer__bottom-phone {
+    font-family: 'museo_sans_cyrl500'; }
+  .footer__bottom-tk {
+    color: #808285;
+    font-size: 12px;
+    font-family: 'museo_sans_cyrl300'; }
