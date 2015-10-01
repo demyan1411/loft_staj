@@ -43,7 +43,8 @@ body {
   padding: 0;
   position: relative;
   z-index: 0;
-  padding-bottom: 595px; }
+  padding-bottom: 595px;
+  min-width: 960px; }
 
 .main__wrapper:before, .main__wrapper:after, .cl:before, .cl:after {
   content: " ";

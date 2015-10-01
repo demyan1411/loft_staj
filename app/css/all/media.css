@@ -1,0 +1,22 @@
+@media screen and (max-width: 1115px) {
+  .footer__menu {
+    margin: 0 10px; }
+  .nav__list {
+    margin: 0 12px; } }
+
+@media screen and (max-width: 1065px) {
+  .footer__menu {
+    width: 145px;
+    margin: 0 6px; }
+  #map {
+    width: 960px; } }
+
+@media screen and (max-width: 1000px) {
+  .footer__menu {
+    width: 140px; }
+  .nav__list {
+    margin: 0 10px; }
+  .rates-block--center {
+    margin: 0 110px !important; }
+  #map {
+    width: 940px; } }

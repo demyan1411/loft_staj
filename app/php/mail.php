@@ -35,7 +35,7 @@ function check_length($value = "", $min, $max) {
 function send(){
 
 	require 'config.php';
-	require 'phpmailer/PHPMailerAutoload.php';
+	require 'phpmailer/autoload.php';
 
 
   $personName = $_POST['name'];
