@@ -278,3 +278,366 @@ var validateThisForm = (function() {
   }
 
 }());
+
+///////////////// MAP ////////////////
+
+var map = (function() {
+
+  var start = function() {
+		_setUpListeners();
+	},
+	_setUpListeners = function() {
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [59.272186, 35.031547],
+                zoom: 6,
+                controls: ['smallMapDefaultSet']
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+
+          var HintLayout = ymaps.templateLayoutFactory.createClass( "<div class='hint'>" +
+                "<div class='hint__title'>{{ properties.title }}</div>" +
+                "<div class='hint__text'>{{ properties.address }}</div>" +
+                "<img src='{{properties.img}}' class='hint__img'>" +
+                "</div>", {
+                    getShape: function () {
+                        var el = this.getElement(),
+                            result = null;
+                        if (el) {
+                            var firstChild = el.firstChild;
+                            result = new ymaps.shape.Rectangle(
+                                new ymaps.geometry.pixel.Rectangle([
+                                    [0, 0]
+                                ])
+                            );
+                        }
+                        return result;
+                    }
+                }
+            );
+
+        var myPlacemarkR1 = new ymaps.Placemark(
+          [59.912797, 30.506257], {
+            title: "ТК Северная",
+            address: "Ленинградская обл., Всеволожский р-н, дер. Кудрово, ул. Ленинградская, д.3, лит. Б",
+            img: "img/hint__img1.jpg",
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map1.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkR1);
+
+
+
+        var myPlacemarkR2 = new ymaps.Placemark(
+          [60.041503, 30.447013], {
+            title: "ТК Северная",
+            address: "Ленинградская обл., Всеволожский р-н, пос. Мурино, ул. Новая, д 7, строение 1",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map1.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkR2);
+
+
+
+
+        var myPlacemarkR3 = new ymaps.Placemark(
+          [59.699712, 29.932512], {
+            title: "ТК Северная",
+            address: "Ленинградская обл., Ломоносовский р-н, с.Русско-Высоцкое",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map1.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkR3);
+
+
+
+				var myPlacemarkR4 = new ymaps.Placemark(
+          [59.902312, 30.320162], {
+            title: "ТК Северная",
+            address: "г.Санкт-Петербург, ул.Киевская, д.3",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map1.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkR4);
+
+
+
+
+        var myPlacemarkB1 = new ymaps.Placemark(
+          [58.120168, 30.309355], {
+            title: "ТК НордЭнерго",
+            address: "Новгородская обл.: г.Сольцы",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB1);
+
+
+
+
+        var myPlacemarkB2 = new ymaps.Placemark(
+          [57.927807, 30.70677], {
+            title: "ТК НордЭнерго",
+            address: "Новгородская обл.: п.Волот",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB2);
+
+
+				var myPlacemarkB3 = new ymaps.Placemark(
+          [59.12119, 31.670285], {
+            title: "ТК НордЭнерго",
+            address: "Новгородская обл.: г.Чудово",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB3);
+
+
+				var myPlacemarkB4 = new ymaps.Placemark(
+          [59.433979, 39.670277], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: с.Кубенское",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB4);
+
+				var myPlacemarkB5 = new ymaps.Placemark(
+          [59.37924, 39.508005], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: с.Остахово",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB5);
+
+				var myPlacemarkB6 = new ymaps.Placemark(
+          [58.928995, 40.042709], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: д.Новое",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB6);
+
+				var myPlacemarkB7 = new ymaps.Placemark(
+          [59.288083, 39.926818], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: п.Дорожный (аэропорт)",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB7);
+
+				var myPlacemarkB8 = new ymaps.Placemark(
+          [59.120977, 40.10843], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: с.Княгинино",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB8);
+
+				var myPlacemarkB9 = new ymaps.Placemark(
+          [59.619352, 39.335879], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: с.Новленское",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB9);
+
+				var myPlacemarkB9 = new ymaps.Placemark(
+          [59.76338, 39.06987], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: д. Нефедово",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB9);
+
+				var myPlacemarkB10 = new ymaps.Placemark(
+          [59.559612, 39.164076], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: д. Севастьяново",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB10);
+
+				var myPlacemarkB11 = new ymaps.Placemark(
+          [59.553133, 38.356949], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: д. Березник",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB11);
+
+				var myPlacemarkB12 = new ymaps.Placemark(
+          [59.127406, 37.90692], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: г.Череповец",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB12);
+
+				var myPlacemarkB13 = new ymaps.Placemark(
+          [59.153675, 37.888675], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: Северное шоссе, 67",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB13);
+
+				var myPlacemarkB14 = new ymaps.Placemark(
+          [59.343364, 38.616328], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: с. Чаромское",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB14);
+
+				var myPlacemarkB15 = new ymaps.Placemark(
+          [59.194735, 38.500652], {
+            title: "ТК НордЭнерго",
+            address: "Вологодская обл.: д. Прогресс",
+            img: "img/hint__img1.jpg"
+        } ,{
+            hintLayout: HintLayout,
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map2.png',
+            iconImageSize: [23, 33],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemarkB15);
+
+
+
+
+        // var myPlacemark6 = new ymaps.Placemark(
+        //   [59.952123, 30.41745], {
+        //     title: "name6",
+        //     address: "Ленинградская обл., Всеволожский р-н, дер. Кудрово, ул. Ленинградская, д.3, лит. Б",
+        //     img: "img/hint__img1.jpg"
+        // } ,{
+        //     hintLayout: HintLayout,
+        //     iconLayout: 'default#image',
+        //     iconImageHref: 'img/map3.png',
+        //     iconImageSize: [23, 33],
+        //     iconImageOffset: [-3, -42]
+        // });
+        // myMap.geoObjects.add(myPlacemark6);
+
+
+
+
+    });
+	}
+
+  return {
+        init: start
+  }
+
+  }());

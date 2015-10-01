@@ -67,6 +67,7 @@ body {
   position: relative;
   z-index: 0;
   padding-bottom: 595px;
+  min-width: 960px;
 }
 
 .main__wrapper:before,
@@ -184,6 +185,7 @@ body {
   margin-top: -595px;
   height: 595px;
   box-sizing: border-box;
+  min-width: 960px;
 }
 
 .footer__wrapper {
@@ -191,6 +193,7 @@ body {
   border-right: 1px solid #a70d1b;
   padding-top: 35px;
   padding-bottom: 45px;
+  text-align: center;
   max-width: 1100px;
   min-width: 960px;
   margin: 0 auto;
@@ -221,6 +224,7 @@ body {
   width: 150px;
   box-sizing: border-box;
   margin: 0 14px;
+  text-align: left;
 }
 
 .footer__menu--item {
@@ -272,7 +276,7 @@ body {
   font-family: 'museo_sans_cyrl300';
   font-size: 14px;
   margin-bottom: 20px;
-  max-width: 370px;
+  max-width: 500px;
   display: inline-block;
   line-height: 22px;
 }
@@ -1086,6 +1090,44 @@ body {
   margin-bottom: 40px;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 1115px) {
+  .footer__menu {
+    margin: 0 10px;
+  }
+
+  .nav__list {
+    margin: 0 12px;
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .footer__menu {
+    width: 145px;
+    margin: 0 6px;
+  }
+
+  #map {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer__menu {
+    width: 140px;
+  }
+
+  .nav__list {
+    margin: 0 10px;
+  }
+
+  .rates-block--center {
+    margin: 0 110px !important;
+  }
+
+  #map {
+    width: 940px;
+  }
 }
 
 .news {

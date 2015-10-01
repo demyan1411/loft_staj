@@ -1,4 +1,5 @@
 $wrapperWidth : 1100px;
+$minWrapperWidth : 960px;
 $footerHeight : 595px;
 $bodyFont : 'Tahoma';
 $bodyFontSize : 16px;
@@ -34,6 +35,7 @@ $fontBold : 'elektra_light_probold';
 	height: 100%;
 	position: relative;
 	box-sizing: border-box;
+	//margin: 0 -10px;
 }
 
 @mixin center {
